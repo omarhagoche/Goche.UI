@@ -14,5 +14,12 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2612" />
     <PackageReference Include="Xamarin.Essentials" Version="1.8.0" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Goche.UI">
+      <HintPath>bin\Release\netstandard2.0\Goche.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

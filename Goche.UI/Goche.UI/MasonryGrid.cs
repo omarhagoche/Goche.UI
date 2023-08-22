@@ -2,6 +2,7 @@
 using System.Collections;
 using Xamarin.Forms.Xaml;
 using Xamarin.Forms;
+using Xamarin.Forms.PancakeView;
 
 namespace Goche.UI
 {
@@ -61,8 +62,8 @@ namespace Goche.UI
 
                 VerticalOptions = LayoutOptions.FillAndExpand;
                 HorizontalOptions = LayoutOptions.FillAndExpand;
-                ColumnSpacing = 5;
-                RowSpacing = 7;
+                ColumnSpacing = 5.0;
+                RowSpacing = 7.0;
                 Padding = new Thickness(15);
 
                 int stackCount = 3; // Number of stack layouts
@@ -84,12 +85,11 @@ namespace Goche.UI
                     var titleValue = GetPropertyValue(item, textPropertyName);
 
                     var heightRequest = itemHeights[(currentIndex + 1) % itemHeights.Length];
-                    //var heightRequest = itemHeights[(currentIndex + 1)];
 
-                    var view = new Frame
+                    var view = new PancakeView
                     {
                         BackgroundColor = Color.Transparent,
-                        CornerRadius = 20,
+                        CornerRadius = new CornerRadius(20),
                         Padding = new Thickness(0),
                         HeightRequest = heightRequest,
                         Content = new Grid
